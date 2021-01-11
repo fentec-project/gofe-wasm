@@ -2,7 +2,7 @@
 
 Main.go contains function **risk** which uses GoFE to encrypt the vector **x** (more below).
 
-The following command grabs main.go and builds lib.wasm - a file that contains functions registered in Main.go and can be used by JavaScript:
+The following command grabs main.go and builds lib.wasm - a file that contains functions registered in main.go and can be used by JavaScript:
 
 ```
 GOOS=js GOARCH=wasm go build -o lib.wasm
@@ -22,7 +22,7 @@ Open http://localhost:8081 in the browser.
 Two functions are registered in main.go to be used from JavaScript: **risk** and **add**.
 
 The function **risk** reads the parameters on the website (age, systolic blood pressure, ...) and encrypts them using GoFE. The ciphertext is written out in the debugging console.
-See privacy-friendly-analyses repository for more about the privacy-friendly computation of the risk of developing the cardiovascular diseases. 
+See [privacy-friendly-analyses repository](https://github.com/fentec-project/privacy-friendly-analyses) for more about the privacy-friendly computation of the risk of developing the cardiovascular diseases. 
 
 The function **add** reads the Number 1 and Number 2, computes the sum (in Go), and writes out the result in the last text field on the website.
 
